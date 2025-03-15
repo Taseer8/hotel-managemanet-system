@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Untitled-1.css">
+   
+
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="brand">My Trip</a>
+        <div class="menu-btn"><div class="menu-btn1"></div>
+
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">home</a>
+                <a href="#">contact</a>
+                <a href="#">about</a>
+                <a href="login.html">LogIn</a>
+                <a href="#gallery">Available cities</a>
+            </div>
+        </div>
+        
+    </header>
+    <section class="home">
+        <img src="01.jpg" class="img active" alt="">
+        <img src="room9.jpg" class="img" alt="">
+        <img src="4.jpeg" class="img" alt="">
+        <img src="room6.jpg" class="img" alt="">
+        <div class="content">
+            <h1> Enjoy   <br> <span>Your trip</span></h1>
+            <p>we will provide you a best rooms in the meropolition citys with in your range </p>
+            <a href="#gallery">Book now</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </div><br>
+        <br>
+        <br>
+        <br>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+        <div class="form">
+            <form action="" method="">
+                <h1>Boook your Stay</h1>
+               
+                <input type="number" class="forms" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;adults">
+                
+                <input type="number" class="forms" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;childens" ><br>
+                check-in
+                <input type="date" class="firms" placeholder="check-in">
+                 check-out
+                <input type="date"  class="firms" placeholder="check-out">
+               
+                <input type="number" class=" firms" placeholder="Rooms" value="1">
+                <input type="submit" class="button">
+            </form>
+        </div>
+    </section>
+    
+    <div id="gallery">
+        <div class="contents">
+            <img src="bangalore.jpg"  class="ban" alt="">
+            <h3>Hotels</h3>
+            <p> Book hotels in </p>
+            <h5>bangalore</h5>
+            <button class="book-1"> <a href="hotels.html">Book Now</a></button>
+        </div>
+    
+        <div class="contents">
+            <img src="mumbi.jpg" alt="">
+            <h3>Hotels</h3>
+            <p> Book hotels in </p>
+            <h5>Mumbi</h5>
+            <button class="book-2"><a href="hotels.html">Book Now</a></button>
+        </div>
+        <div class="contents">
+            <img src="hyderabad.jpg" alt="">
+            <h3>Hotels</h3>
+            <p> Book hotels in </p>
+            <h5>Hyderabad</h5>
+            <button class="book-3"><a href="hotels.html">Book Now</a></button>
+        </div>
+        <div class="contents">
+            <img src="pune.jpg" alt="">
+            <h3>Hotels</h3>
+            <p> Book hotels in </p>
+            <h5>pune</h5>
+            <button class="book-4"><a href="hotels.html">Book Now</a></button>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript">
+        //javascript of resonsive navigation menuS
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+           menuBtn.classList.toggle("active");
+           navigation.classList.toggle("active");
+        });
+        //javascript for video slider navigation 
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".img");
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+            
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+
+        btns.forEach( (btn, i) => {
+            btn.addEventListener("click",()=>{
+                sliderNav(i);
+            });
+        });
+    </script>
+</body>
+</html>
